@@ -87,7 +87,7 @@ function createStudentCard() {
     previewFullname.textContent = fullname;
     previewEmail.textContent = email;
     previewPhone.textContent = phone;
-    
+
 
 
     // Lägg till studentkortet i historiken
@@ -149,7 +149,13 @@ function deleteHistory() {
 // När formuläret skickas:
 // - validera inmatningen
 // - skapa studentkort om valideringen lyckas
+form.addEventListener("submit", function(event) {
+    event.preventDefault();
 
+    if (validateForm()) {
+        createStudentCard();
+    }
+});
 
 // När användaren klickar på "Rensa"
 
