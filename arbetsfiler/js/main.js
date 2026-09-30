@@ -84,7 +84,11 @@ function createStudentCard() {
     const font = fontSelect.value;
 
     // Uppdatera studentkortet
+    previewFullname.textContent = fullname;
+    previewEmail.textContent = email;
+    previewPhone.textContent = phone;
     
+
 
     // Lägg till studentkortet i historiken
 
