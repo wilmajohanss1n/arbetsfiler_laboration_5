@@ -78,8 +78,13 @@ function displayErrors() {
  */
 function createStudentCard() {
     // Hämta information från formuläret
+    const fullname = fullnameInput.value;
+    const email = emailInput.value;
+    const phone = phoneInput.value;
+    const font = fontSelect.value;
 
     // Uppdatera studentkortet
+    
 
     // Lägg till studentkortet i historiken
 
