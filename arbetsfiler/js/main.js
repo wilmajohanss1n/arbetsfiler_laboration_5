@@ -140,8 +140,32 @@ function loadHistory() {
  */
 function renderHistory() {
     // Rensa tidigare visad historik
+    historySection.innerHTML = "";
 
     // Skriv ut innehållet i history till DOM
+    history.forEach(function (student) {
+        const card = document.createElement("div");
+        card.classList.add("card");
+
+        const name = document.createElement("div");
+        name.classList.add("card-info");
+        name.textContent = student.fullname;
+
+        const email = document.createElement("div");
+        email.classList.add("card-info");
+        email.textContent = student.email;
+
+        const phone = document.createElement("div");
+        phone.classList.add("card-info");
+        phone.textContent = student.phone;
+
+        card.appendChild(name);
+        card.appendChild(email);
+        card.appendChild(phone);
+
+        historySection.appendChild(card);
+
+    });
 }
 
 
