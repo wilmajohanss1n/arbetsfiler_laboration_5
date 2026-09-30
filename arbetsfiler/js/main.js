@@ -103,7 +103,8 @@ function createStudentCard() {
     };
 
     history.unshift(student);
-    
+    saveHistory();
+
 
     // Spara och uppdatera historiken
 }
@@ -114,6 +115,8 @@ function createStudentCard() {
  */
 function saveHistory() {
     // Spara history i localStorage
+    localStorage.setItem("StudentHistory", JSON.stringify(history));
+
 }
 
 
