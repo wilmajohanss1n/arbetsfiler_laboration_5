@@ -165,6 +165,12 @@ function renderHistory() {
         card.appendChild(email);
         card.appendChild(phone);
 
+        const font = document.createElement("div");
+        font.classList.add("card-info");
+        font.textContent = `Font: ${student.font}`;
+
+        card.appendChild(font);
+
         historySection.appendChild(card);
 
     });
