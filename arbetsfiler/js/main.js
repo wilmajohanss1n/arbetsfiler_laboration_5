@@ -107,6 +107,7 @@ function createStudentCard() {
 
 
     // Spara och uppdatera historiken
+    renderHistory();
 }
 
 
@@ -130,7 +131,7 @@ function loadHistory() {
 
     // Uppdatera history
     if (savedHistory) {
-        History = JSON.parse(savedHistory);
+        history = JSON.parse(savedHistory);
     }
 }
 
@@ -225,4 +226,7 @@ deleteHistoryButton.addEventListener("click", function () {
 
 
 // När sidan laddas:
+
 // - läs in och visa eventuell tidigare historik
+loadHistory();
+renderHistory();
