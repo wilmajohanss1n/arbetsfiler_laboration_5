@@ -151,15 +151,15 @@ function renderHistory() {
 
         const name = document.createElement("div");
         name.classList.add("card-info");
-        name.textContent = student.fullname;
+        name.textContent = `Namn: ${student.fullname}`;
 
         const email = document.createElement("div");
         email.classList.add("card-info");
-        email.textContent = student.email;
+        email.textContent = `E-post: ${student.email}`;
 
         const phone = document.createElement("div");
         phone.classList.add("card-info");
-        phone.textContent = student.phone;
+        phone.textContent = `Telefon: ${student.phone}`;
 
         card.appendChild(name);
         card.appendChild(email);
@@ -167,7 +167,7 @@ function renderHistory() {
 
         const font = document.createElement("div");
         font.classList.add("card-info");
-        font.textContent = `Font: ${student.font}`;
+        font.textContent = `Typsnitt: ${student.font}`;
 
         card.appendChild(font);
 
